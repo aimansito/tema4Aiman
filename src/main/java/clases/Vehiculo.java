@@ -11,9 +11,9 @@ package clases;
 //definicion de la clase(static,extends,abstract,etc)
 public class Vehiculo {
     //atributos --caracteristicas  
-    String matricula;
-    String marca;
-    double velocidad;
+    private String matricula;
+    private String marca;
+    private double velocidad;
     
     
     //metodos --acciones
@@ -25,4 +25,42 @@ public class Vehiculo {
         this.marca = marca;
         this.velocidad = velocidad;
     }
+    //getters y setters son public
+    //metodos get sirven para obtener datos
+    public String getMatricula(){
+        return this.matricula;
+    }
+    public String getMarca(){
+        return this.marca;
+    }
+    public double getVelocidad(){
+        return this.velocidad;
+    }
+   //metodos set --> sirven para establece datos en los atributos
+
+   public void setMatricula(String matricula){
+       this.matricula = matricula ;
+   }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public void setVelocidad(double velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Vehiculo{");
+        sb.append("matricula=").append(matricula);
+        sb.append(", marca=").append(marca);
+        sb.append(", velocidad=").append(velocidad);
+        sb.append('}');
+        return sb.toString();
+    }
+
+    
+   
 }
